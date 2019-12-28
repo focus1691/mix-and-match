@@ -1,0 +1,32 @@
+{
+  "name": "mix-and-match",
+  "version": "1.0.0",
+  "description": "Match two pairs game - psychology themed",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/traderjosh/mix-and-match.git"
+  },
+  "keywords": [
+    "Phaser",
+    "3",
+    "Psychology",
+    "Game",
+    "Development",
+    "HTML5",
+    "Game"
+  ],
+  "author": "Joshua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/traderjosh/mix-and-match/issues"
+  },
+  "homepage": "https://github.com/traderjosh/mix-and-match#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
