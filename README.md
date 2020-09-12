@@ -1,3 +1,5 @@
+## [Demo](https://mix-and-match.netlify.app/)
+
 # mix-and-match
 Match two pairs game - psychology themed
 
@@ -5,11 +7,7 @@ Match two pairs game - psychology themed
 A small game made with Phaser 3.
 
 ## Installation
-`npm install` to install the dev dependencies
-
-## Scripts
-- `npm start` to start the express server.
-- visit http://localhost:8081.
+`npm install`
 
 ## The game
 Match all the pairs.
