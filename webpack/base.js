@@ -1,3 +1,4 @@
+require('dotenv').config();
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -21,7 +22,7 @@ module.exports = {
         use: "raw-loader"
       },
       {
-        test: /\.(gif|png|jpe?g|svg|xml|ttf|mp3|wav)$/i,
+        test: /\.(gif|png|jpe?g|svg|xml|ttf|mp3|mp4|wav)$/i,
         use: "file-loader"
       },
       {

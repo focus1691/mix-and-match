@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { gameOptions } from './constants';
 //* Scenes
+import playIntro from './scenes/introductionScene'; 
 import preloaderScene from './scenes/preloader';
 import playMenuScene from './scenes/playMenu';
 import restartMenuScene from './scenes/restartMenu';
@@ -21,7 +22,7 @@ var config = {
         mode: Phaser.DOM.FIT,
         autoCenter: Phaser.DOM.CENTER_BOTH
     },
-    scene: [preloaderScene, playMenuScene, playGameScene, restartMenuScene]
+    scene: [playIntro, preloaderScene, playMenuScene, playGameScene, restartMenuScene]
 };
 
 var game = new Phaser.Game(config);
