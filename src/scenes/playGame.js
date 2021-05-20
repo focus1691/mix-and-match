@@ -1,4 +1,4 @@
-import { gameOptions, WRONG_ANSWER_DELAY, WRONG_ANSWER_DURATION, ROLL_OVER_DELAY } from '../constants';
+import { gameOptions, WRONG_ANSWER_DELAY, WRONG_ANSWER_DURATION, ROLL_OVER_DELAY, TOTAL_PAIRS } from '../constants';
 import Phaser from 'phaser';
 
 export default class playGame extends Phaser.Scene {
@@ -79,7 +79,7 @@ export default class playGame extends Phaser.Scene {
         scene.stack = [];
         scene.correctAnswer.play();
 
-        if (scene.matchingPairs === 0) {
+        if (scene.matchingPairs === TOTAL_PAIRS) {
           scene.music.stop();
           this.scene.scene.pause();
           this.scene.scene.launch('restartMenu');

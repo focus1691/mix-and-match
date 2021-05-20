@@ -10,3 +10,5 @@ export const gameOptions = {
     cols: 6,
   },
 };
+
+export const TOTAL_PAIRS = gameOptions.boardSize.rows * gameOptions.boardSize.cols / 2;
