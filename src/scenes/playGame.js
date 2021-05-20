@@ -1,4 +1,4 @@
-import { gameOptions } from '../constants';
+import { gameOptions, WRONG_ANSWER_DELAY, WRONG_ANSWER_DURATION, ROLL_OVER_DELAY } from '../constants';
 import Phaser from 'phaser';
 
 export default class playGame extends Phaser.Scene {
@@ -43,6 +43,7 @@ export default class playGame extends Phaser.Scene {
 
     this.music = this.sound.add('theme');
     this.music.play({ loop: true });
+    this.sound.volume = 0.1;
   }
 
   shutdown() {
@@ -65,14 +66,11 @@ export default class playGame extends Phaser.Scene {
     var tween = scene.tweens.add({
       targets: tile.tileSprite,
       alpha: 1,
-      duration: 1000,
+      duration: ROLL_OVER_DELAY,
       onComplete: function () {},
     });
 
     stack.push(tile);
-    scene.music.stop();
-    this.scene.scene.pause();
-    this.scene.scene.launch('restartMenu');
     if (stack.length === 1) {
       scene.inputBlocked = false;
     } else if (stack.length === 2) {
@@ -92,7 +90,7 @@ export default class playGame extends Phaser.Scene {
         scene.positiveWarning.play();
 
         scene.time.addEvent({
-          delay: 2000,
+          delay: WRONG_ANSWER_DELAY,
           callback: scene.handleWrongAnswer,
           args: [scene],
           loop: false,
@@ -113,7 +111,7 @@ export default class playGame extends Phaser.Scene {
     var tween2 = scene.tweens.add({
       targets: [scene.stack[0].startingSprite, scene.stack[1].startingSprite],
       alpha: 1,
-      duration: 1000,
+      duration: WRONG_ANSWER_DURATION,
       onComplete: function () {
         scene.stack = [];
 
