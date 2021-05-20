@@ -2,10 +2,10 @@
   "name": "mix-and-match",
   "version": "1.0.0",
   "description": "Match two pairs game - psychology themed",
-  "main": "game.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js"
+    "build": "webpack --config webpack/prod.js ",
+    "start": "webpack serve --config webpack/base.js --open"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,24 @@
   },
   "homepage": "https://github.com/traderjosh/mix-and-match#readme",
   "devDependencies": {
-    "express": "^4.17.1"
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.5",
+    "favicons": "^6.2.2",
+    "favicons-webpack-plugin": "^5.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "raw-loader": "^4.0.2",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.2",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "phaser": "^3.54.0"
   }
 }
